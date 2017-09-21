@@ -8,7 +8,7 @@ namespace WebTestSample
     public class WebsiteTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void QueryGoogle()
         {
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
