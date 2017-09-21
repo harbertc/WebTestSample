@@ -3,8 +3,8 @@
 before_build:
   - nuget restore
 
-#build:
-#  verbosity: mini
+build:
+  verbosity: minimal
 
 test:
   assemblies:
