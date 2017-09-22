@@ -1,6 +1,9 @@
 ﻿image: Visual Studio 2017
 before_build:
   - cmd: nuget restore
+branches:
+  only:
+    - develop
 build:
   verbosity: minimal
 deploy:
