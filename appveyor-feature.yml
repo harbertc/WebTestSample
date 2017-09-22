@@ -1,15 +1,15 @@
-﻿image: Visual Studio 2017
+﻿version: '1.1.1'
+image: Visual Studio 2017
 before_build:
   - cmd: nuget restore
 branches:
   only:
     - /feature\/.*/
+    - /hotfix\/.*/
 build:
   verbosity: minimal
 deploy:
   - provider: Environment
     name: DEV
-    on:
-      branch: develop
 environment:
   environment: FEATURE
