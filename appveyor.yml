@@ -17,18 +17,15 @@
   branches:
     only:
       - develop 
-  before_build:
-    - cmd: nuget restore
+
   deploy:
     - provider: Environment
       name: DEV
-#  image: Visual Studio 2017
 -
   branches:
     only:
       - /release\/.*/
 
-  configuration: QA
   deploy:
     - provider: Environment
       name: QA
@@ -38,10 +35,11 @@
     only:
       - master
 
-  configuration: PROD
   deploy:
     - provider: Environment
       name: PROD
 
 -
+  before_build:
+    - cmd: nuget restore
   image: Visual Studio 2017
