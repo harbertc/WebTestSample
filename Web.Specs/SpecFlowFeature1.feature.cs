@@ -19,6 +19,7 @@ namespace Web.Specs
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Test")]
+    [NUnit.Framework.CategoryAttribute("web")]
     public partial class TestFeature
     {
         
@@ -31,7 +32,8 @@ namespace Web.Specs
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test", null, ProgrammingLanguage.CSharp, new string[] {
+                        "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,16 +66,46 @@ namespace Web.Specs
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User Searches Yahoo")]
+        public virtual void UserSearchesYahoo()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Searches Yahoo", ((string[])(null)));
+#line 4
+this.ScenarioSetup(scenarioInfo);
+#line 5
+ testRunner.Given("I navigate to \'http://www.yahoo.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.Then("the page title is \'Yahoo\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User Searches Google")]
         public virtual void UserSearchesGoogle()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Searches Google", ((string[])(null)));
-#line 3
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 4
+#line 10
  testRunner.Given("I navigate to \'http://www.google.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
+#line 11
  testRunner.Then("the page title is \'Google\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User Goes to Github")]
+        public virtual void UserGoesToGithub()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Goes to Github", ((string[])(null)));
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 14
+ testRunner.Given("I navigate to \'http://www.github.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+ testRunner.Then("the page title is \"The world\'s leading software development platform · GitHub\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
