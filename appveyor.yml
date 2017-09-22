@@ -10,6 +10,8 @@
       - /feature\/.*/
       - /hotfix\/.*/  
   configuration: LOCAL
+  before_build:
+    - cmd: nuget restore
   deploy:
     - provider: Environment
       name: LOCAL
@@ -17,7 +19,8 @@
   branches:
     only:
       - develop 
-
+  before_build:
+    - cmd: nuget restore
   deploy:
     - provider: Environment
       name: DEV
@@ -25,7 +28,8 @@
   branches:
     only:
       - /release\/.*/
-
+  before_build:
+    - cmd: nuget restore
   deploy:
     - provider: Environment
       name: QA
@@ -34,12 +38,12 @@
   branches:
     only:
       - master
-
+  before_build:
+    - cmd: nuget restore
   deploy:
     - provider: Environment
       name: PROD
 
 -
-  before_build:
-    - cmd: nuget restore
   image: Visual Studio 2017
+  version: 1.1.2
