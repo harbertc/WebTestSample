@@ -44,4 +44,4 @@
       name: PROD
 
 -
-  configuration: LOCAL
+  image: Visual Studio 2017
