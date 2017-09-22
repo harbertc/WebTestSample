@@ -10,14 +10,6 @@ namespace Web.Specs
     public class NavigateGoogleSteps
     {
 
-        IWebDriver driver;
-
-        NavigateGoogleSteps()
-        {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-        }
-
         [Given(@"I navigate to '(.*)'")]
         public void GivenINavigateTo(string url)
         {
@@ -41,5 +33,25 @@ namespace Web.Specs
         {
             ScenarioContext.Current.Pending();
         }
+
+        [BeforeFeature("web")]
+        public static void BeforeFeature()
+        {
+            FeatureContext.Current.Add("driver", new ChromeDriver());
+            ((IWebDriver) FeatureContext.Current["driver"]).Manage().Window.Maximize();
+        }
+
+        [AfterFeature("web")]
+        public static void AfterFeature()
+        {
+            ((IWebDriver)FeatureContext.Current["driver"]).Quit();
+        }
+
+        public IWebDriver driver
+        {
+            get { return ((IWebDriver)FeatureContext.Current["driver"]); }
+        }
+
+        
     }
 }
