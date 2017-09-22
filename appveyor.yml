@@ -1,0 +1,38 @@
+﻿version: '1.1.1'
+image: Visual Studio 2017
+before_build:
+  - cmd: nuget restore
+
+build:
+  verbosity: minimal
+
+-
+  branches:
+    only:
+      - /feature\/.*/
+      - /hotfix\/.*/
+  deploy:
+    - provider: Environment
+      name: LOCAL
+-
+  branches:
+    only:
+      - develop
+  deploy:
+    - provider: Environment
+      name: DEV
+-
+  branches:
+    only:
+      - /release\/.*/
+  deploy:
+    - provider: Environment
+      name: QA
+-
+  branches:
+    only:
+      - master
+  deploy:
+    - provider: Environment
+      name: PROD
+
