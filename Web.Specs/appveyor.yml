@@ -2,7 +2,8 @@
 before_build:
   - cmd: nuget restore
 build:
-  verbosity: minimaldeploy:
+  verbosity: minimal
+deploy:
   - provider: Environment
     name: PROD
     on:
