@@ -10,25 +10,25 @@ namespace Web.Specs
     public class NavigateGoogleSteps
     {
 
-        [Given(@"I navigate to '(.*)'")]
+        [Given("I navigate to '(.*)'")]
         public void GivenINavigateTo(string url)
         {
             driver.Navigate().GoToUrl(url);
         }
 
-        [Then(@"the page title is '(.*)'")]
+        [Then("the page title is [\"'](.*)[\"']")]
         public void ThePageTitleIs(string title)
         {
             Assert.That(driver.Title, Is.EqualTo(title));
         }
 
-        [When(@"I search for '(.*)'")]
+        [When("I search for '(.*)'")]
         public void WhenISearchFor(string p0)
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"I see search results")]
+        [Then("I see search results")]
         public void ThenISeeSearchResults()
         {
             ScenarioContext.Current.Pending();

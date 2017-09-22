@@ -9,3 +9,7 @@ Scenario: User Searches Yahoo
 Scenario: User Searches Google
 	Given I navigate to 'http://www.google.com'
 	Then the page title is 'Google'
+
+Scenario: User Goes to Github
+	Given I navigate to 'http://www.github.com'
+	Then the page title is "The world's leading software development platform · GitHub"
