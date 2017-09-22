@@ -6,22 +6,27 @@ before_build:
 build:
   verbosity: minimal
 
-- branches:
+-
+  branches:
     only:
       - /feature\/.*/
       - /hotfix\/.*/
+  
   configuration: LOCAL
   deploy:
     - provider: Environment
       name: LOCAL
-- branches:
+- 
+  branches:
     only:
       - develop
+  
   configuration: DEV
   deploy:
     - provider: Environment
       name: DEV
-- branches:
+-
+  branches:
     only:
       - /release\/.*/
 
@@ -29,7 +34,9 @@ build:
   deploy:
     - provider: Environment
       name: QA
-- branches:
+
+-
+  branches:
     only:
       - master
 
@@ -38,3 +45,5 @@ build:
     - provider: Environment
       name: PROD
 
+-
+  configuration: LOCAL
