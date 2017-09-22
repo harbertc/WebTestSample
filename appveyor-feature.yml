@@ -4,12 +4,11 @@ before_build:
 branches:
   only:
     - /feature\/.*/
+    - /hotfix\/.*/
 build:
   verbosity: minimal
 deploy:
   - provider: Environment
     name: DEV
-    on:
-      branch: develop
 environment:
   environment: FEATURE
