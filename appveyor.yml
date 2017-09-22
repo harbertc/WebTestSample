@@ -8,8 +8,7 @@ build:
   branches:
     only:
       - /feature\/.*/
-      - /hotfix\/.*/
-  
+      - /hotfix\/.*/  
   configuration: LOCAL
   deploy:
     - provider: Environment
