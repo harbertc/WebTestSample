@@ -9,3 +9,5 @@ build:
 deploy:
   - provider: Environment
     name: PROD
+environment:
+  environment: PROD
