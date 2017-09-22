@@ -12,6 +12,7 @@ build:
       - /feature\/.*/
       - /hotfix\/.*/
 
+  configuration: LOCAL
   deploy:
     - provider: Environment
       name: LOCAL
@@ -20,6 +21,7 @@ build:
     only:
       - develop
 
+  configuration: Dev
   deploy:
     - provider: Environment
       name: DEV
@@ -28,6 +30,7 @@ build:
     only:
       - /release\/.*/
 
+  configuration: QA
   deploy:
     - provider: Environment
       name: QA
@@ -35,6 +38,8 @@ build:
   branches:
     only:
       - master
+
+  configuration: PROD
   deploy:
     - provider: Environment
       name: PROD
