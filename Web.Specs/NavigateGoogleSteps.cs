@@ -13,7 +13,7 @@ namespace Web.Specs
         [Given(@"I navigate to '(.*)'")]
         public void GivenINavigateTo(string url)
         {
-            driver.Navigate().GoToUrl("http://www.google.com");
+            driver.Navigate().GoToUrl(url);
         }
 
         [Then(@"the page title is '(.*)'")]
