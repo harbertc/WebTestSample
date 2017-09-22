@@ -1,0 +1,13 @@
+﻿deploy:
+  - provider: Environment
+    name: PROD
+    on:
+      branch: master
+  - provider: Environment
+    name: QA
+    on:
+      branch: /release\/*/
+  - provider: Environment
+    name: DEV
+    on:
+      branch: develop
