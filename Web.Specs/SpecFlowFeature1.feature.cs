@@ -120,7 +120,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
  testRunner.Given("I navigate to \'http://www.appveyor.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
- testRunner.Then("the page title is \"bogus\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the page title is \"Continuous Integration and Deployment service for Windows deve" +
+                    "lopers | AppVeyor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

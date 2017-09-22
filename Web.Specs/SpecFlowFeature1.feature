@@ -16,4 +16,4 @@ Scenario: User Goes to Github
 
 Scenario: User Goes to Appveyor
 	Given I navigate to 'http://www.appveyor.com'
-	Then the page title is "bogus"
+	Then the page title is "Continuous Integration and Deployment service for Windows developers | AppVeyor"
