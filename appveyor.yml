@@ -17,7 +17,6 @@
   branches:
     only:
       - develop 
-  configuration: DEV
   before_build:
     - cmd: nuget restore
   deploy:
