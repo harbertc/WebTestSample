@@ -14,6 +14,12 @@
       - develop
   
   configuration: DEV
+﻿  version: '1.1.1'
+  image: Visual Studio 2017
+  before_build:
+    - cmd: nuget restore
+  build:
+    verbosity: minimal
   deploy:
     - provider: Environment
       name: DEV
@@ -39,10 +45,3 @@
 
 -
   configuration: LOCAL
-﻿  version: '1.1.1'
-  image: Visual Studio 2017
-  before_build:
-    - cmd: nuget restore
-  build:
-    verbosity: minimal
-
