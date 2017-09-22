@@ -11,3 +11,5 @@ deploy:
     name: DEV
     on:
       branch: develop
+environment:
+  environment: FEATURE
