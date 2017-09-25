@@ -9,7 +9,6 @@
     only:
       - /feature\/.*/
       - /hotfix\/.*/  
-  configuration: LOCAL
   before_build:
     - cmd: nuget restore
   deploy:
