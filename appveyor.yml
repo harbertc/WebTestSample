@@ -17,6 +17,9 @@
   deploy:
     - provider: Environment
       name: DEV
+  environment:
+    ENVIRONMENT:
+      secure: QJCXHuY0DfEsQWkH/TXLnw==
 -
   branches:
     only:
@@ -26,6 +29,9 @@
   deploy:
     - provider: Environment
       name: QA
+  environment:
+    ENVIRONMENT:
+      secure: QJCXHuY0DfEsQWkH/TXLnw==
 -
   branches:
     only:
@@ -35,6 +41,9 @@
   deploy:
     - provider: Environment
       name: PROD
+  environment:
+    ENVIRONMENT:
+      secure: QJCXHuY0DfEsQWkH/TXLnw==
 -
   image: Visual Studio 2017
   version: 1.1.2
