@@ -37,7 +37,7 @@ namespace Web.Specs
         [Then("the environment is '(.*)'")]
         public void TheEnvironmentIs(string expectedEnvironment)
         {
-            Assert.That(FeatureContext.Current["ENVIRONMENT"], Is.EqualTo(expectedEnvironment));
+            Assert.That(Environment.GetEnvironmentVariable("ENVIRONMENT"), Is.EqualTo(expectedEnvironment));
         }
 
         [BeforeFeature("web")]
