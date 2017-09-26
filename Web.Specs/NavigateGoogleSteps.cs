@@ -34,11 +34,24 @@ namespace Web.Specs
             ScenarioContext.Current.Pending();
         }
 
+        [Then("the environment is '(.*)'")]
+        public void TheEnvironmentIs(string expectedEnvironment)
+        {
+            Assert.That(Environment.GetEnvironmentVariable("ENVIRONMENT"), Is.EqualTo(expectedEnvironment));
+        }
+
         [BeforeFeature("web")]
         public static void BeforeFeature()
         {
             FeatureContext.Current.Add("driver", new ChromeDriver());
             ((IWebDriver) FeatureContext.Current["driver"]).Manage().Window.Maximize();
+        }
+
+        [BeforeFeature]
+        public static void LoadEnvironment()
+        {
+            string environment = Environment.GetEnvironmentVariable("ENVIRONMENT");
+            FeatureContext.Current.Add("ENVIRONMENT", environment);
         }
 
         [AfterFeature("web")]
