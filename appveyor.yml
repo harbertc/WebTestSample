@@ -2,12 +2,12 @@
   branches:
     only:
       - /feature\/.*/
-      - /hotfix\/.*/  
+      - /hotfix\/.*/ 
   before_build:
     - cmd: nuget restore
   deploy:
     - provider: Environment
-      name: LOCAL
+      name: DEV
 - 
   branches:
     only:
