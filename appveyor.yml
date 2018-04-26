@@ -17,7 +17,8 @@
     - cmd: nuget restore
     - cmd: npm install -g testery
   after_test:
-    - cmd: 'testery --username="${TESTERY_USERNAME}" --password="${TESTERY_PASSWORD}'
+    - cmd: 'testery --username="${TESTERY_USERNAME}" --password="${TESTERY_PASSWORD}"'
+    - cmd: echo username is $TESTERY_USERNAME - or ${TESTERY_USERNAME} - 
   deploy:
     - provider: Environment
       name: DEV
