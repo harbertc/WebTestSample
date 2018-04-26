@@ -18,21 +18,21 @@ namespace Web.Specs
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Test")]
+    [NUnit.Framework.DescriptionAttribute("Test The Website Titles")]
     [NUnit.Framework.CategoryAttribute("web")]
-    public partial class TestFeature
+    public partial class TestTheWebsiteTitlesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "SpecFlowFeature1.feature"
+#line 1 "WebsiteTitles.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test The Website Titles", null, ProgrammingLanguage.CSharp, new string[] {
                         "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -96,30 +96,15 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User Goes to Github")]
-        public virtual void UserGoesToGithub()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Goes to Github", ((string[])(null)));
-#line 13
-this.ScenarioSetup(scenarioInfo);
-#line 14
- testRunner.Given("I navigate to \'http://www.github.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
- testRunner.Then("the page title is \"The world\'s leading software development platform · GitHub\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User Goes to Appveyor")]
         public virtual void UserGoesToAppveyor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Goes to Appveyor", ((string[])(null)));
-#line 17
+#line 13
 this.ScenarioSetup(scenarioInfo);
-#line 18
+#line 14
  testRunner.Given("I navigate to \'http://www.appveyor.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
+#line 15
  testRunner.Then("the page title is \"Continuous Integration and Deployment service for Windows deve" +
                     "lopers | AppVeyor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -131,9 +116,9 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void UserChecksEnvironment()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Checks Environment", ((string[])(null)));
-#line 21
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 22
+#line 18
  testRunner.Then("the environment is \'DEV\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
