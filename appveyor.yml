@@ -23,12 +23,13 @@
     - provider: Environment
       name: DEV
   environment:
-    - ENVIRONMENT:
-        secure: QJCXHuY0DfEsQWkH/TXLnw==
-    - TESTERY_USERNAME:
-        secure: mvVRkzHFDkr8kodPGN8+a5seWh+Uq2nbqycfIWYWSJA=
-    - TESTERY_PASSWORD:
-        secure: CCl2Cjgf5P7PrYzODKIfug==
+    TESTERY_USERNAME:
+      secure: mvVRkzHFDkr8kodPGN8+a5seWh+Uq2nbqycfIWYWSJA=
+    TESTERY_PASSWORD:
+      secure: CCl2Cjgf5P7PrYzODKIfug==
+    ENVIRONMENT:
+      secure: QJCXHuY0DfEsQWkH/TXLnw==
+    
 -
   branches:
     only:
