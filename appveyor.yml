@@ -17,8 +17,12 @@
     - cmd: nuget restore
     - cmd: npm install -g testery
   after_test:
-    - cmd: echo testery --username="%TESTERY_USERNAME%" --password="%TESTERY_PASSWORD%"
-    - ps: echo username is $env:TESTERY_USERNAME - or ${Env:TESTERY_USERNAME} - 
+    - cmd: ls .\Web.Specs\
+    - cmd: ls .\Web.Specs\bin\Debug\
+    - cmd: echo testery start-session --username="%TESTERY_USERNAME%" --password="%TESTERY_PASSWORD%"
+    - cmd: echo testery load-suite --feature-directory=".\Web.Specs\" --suite="SmokeTests"
+    - cmd: echo testery upload-specflow-assembly --assembly-id="mysteps" --assembly=".\Web.Specs\bin\Debug\Web.Specs.dll"
+    - cmd: echo testery start-testrun --suite="SmokeTests" --output-format="appveyor" --wait
   deploy:
     - provider: Environment
       name: DEV
