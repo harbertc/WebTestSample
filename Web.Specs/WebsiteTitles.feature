@@ -1,4 +1,4 @@
-﻿@web
+@web
 Feature: Test The Website Titles
 
 Scenario: User Searches Yahoo
