@@ -13,6 +13,3 @@ Scenario: User Searches Google
 Scenario: User Goes to Appveyor
 	Given I navigate to 'http://www.appveyor.com'
 	Then the page title is "Continuous Integration and Deployment service for Windows developers | AppVeyor"
-
-Scenario: User Checks Environment
-	Then the environment is 'DEV'
